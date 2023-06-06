@@ -16,9 +16,14 @@ st.title('Police Incidents Reports from 2018 to 2020 in San Francisco')
 df = pd.read_csv('https://drive.google.com/file/d/1sUXMxryvguQp81yseLxYymTX5RxaH0e9/view?usp=drive_link/Police_Department_Incident_Reports__2018_to_Present.csv')
 
 st.markdown('The data shown below belongs to incident reports in the city of San Francisco, from the year 2018 to 2020, with details from each case such as date, day of the week, police district, neighborhood in which it happened, type of incident in category and subcategory, exact location and resolution.')
-mapa=pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.7272, -122.4194],
-    columns=['lat', 'lon'])
+latitude = df['Latitude']
+longitude = df['Longitude']
+
+# Crear un DataFrame con las coordenadas de San Francisco
+mapa = pd.DataFrame(
+    np.array([[latitude, longitude]]),
+    columns=['lat', 'lon']
+)
 
 mapa = mapa.dropna()
 st.map(mapa.astype(float))

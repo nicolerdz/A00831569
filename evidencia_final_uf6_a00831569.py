@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1_4oF5ITdZw4_T4rs3gFYTi7lXTDJE0zn
 """
 import streamlit as st
-import numpy as np
+#import numpy as np
 import pandas as pd
-import plotly as px
-import plotly.figure_factury as ff
-from brokeh.plotting import figure
-import matplotlib.pyplot as plt
+#import plotly as px
+#import plotly.figure_factury as ff
+#from brokeh.plotting import figure
+#import matplotlib.pyplot as plt
 
 st.title('Police Incidents Reports from 2018 to 2020 in San Francisco')
 
